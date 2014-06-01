@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Title</title>
+		<title>What is Breadth-first search?</title>
 		<meta charset="utf-8">
 	</head>
 	<body>
 		<div id="header">
-			Header
+			What is Breadth-first search?
 		</div>
 
 		<div id="content">
-			Content
+			<p><span class="search_alg">Breadth-first search</span> is an algorithm for searching a tree structure. It differs from <span class="search_alg">depth-first search</span> in that it searches the entire <em>breadth</em> of the tree before moving onto the next level down.</p>
+
+			<p>The algorithm is as follows:
+				<ol>
+					<li>Add the root node to the queue</li>
+					<li>Get the next node in the queue (initially, the root node)</li>
+					<ul>
+						<li>If the node is the one we're searching for, end the algorithm and return the node</li>
+						<li>Else, add any child nodes to the queue</li>
+					</ul>
+					<li>If the queue is empty, end the algorithm and return nil (search node not found)</li>
+					<li>Continue from step 2.</li>
+				</ol>
+			</p>
+			<img id="bfs_img" src="http://upload.wikimedia.org/wikipedia/commons/3/33/Breadth-first-tree.svg" alt="breadth-first search tree diagram"/>
 		</div>
 
 		<div id="footer">
-			Footer
+			<a href="http://jayrob.in">James Robinson</a> 2014
 		</div>
 
 		<div id="sidebar">
-			Sidebar
+			<a href="http://en.wikipedia.org/wiki/Breadth-first_search">BFS Wiki article</a>
+			<a href="https://www.youtube.com/watch?v=QRq6p9s8NVg">BFS YouTube video</a>
 		</div>
 	</body>
 </html>
