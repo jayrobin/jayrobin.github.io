@@ -15,6 +15,10 @@ header h1 {
 	opacity: 0.8;
 }
 
+header h1 a {
+	color: black;
+}
+
 #main {
 	margin: 0 auto;
 	width: 640px;
@@ -83,4 +87,8 @@ nav a:hover {
 
 .article_content {
 	padding-top: 10px;
+}
+
+a.read_more {
+	text-decoration: underline;
 }
