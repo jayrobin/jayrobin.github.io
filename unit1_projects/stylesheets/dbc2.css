@@ -91,3 +91,7 @@ a:hover {
 #footer p {
 	padding: 0 10px;
 }
+
+ol > li:first-child, ol > li:last-child {
+	color: #8e44ad;
+}
