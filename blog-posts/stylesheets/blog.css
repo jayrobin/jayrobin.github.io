@@ -1,5 +1,6 @@
 * { margin: 0; padding: 0; }
 a { text-decoration: none; color: #2c3e50; }
+a:hover { text-decoration: underline; }
 
 html { 
   background: url(../img/back.jpg) no-repeat center center fixed;
@@ -74,6 +75,7 @@ nav a {
 
 nav a:hover {
 	background-color: #bdc3c7;
+	text-decoration: none;
 }
 
 .article_title {
@@ -90,5 +92,11 @@ nav a:hover {
 }
 
 a.read_more {
+	text-decoration: none;
+	display: block;
+	margin-top: 10px;
+}
+
+a.read_more:hover {
 	text-decoration: underline;
 }
