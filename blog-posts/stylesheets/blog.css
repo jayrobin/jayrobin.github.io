@@ -104,3 +104,15 @@ a.read_more {
 a.read_more:hover {
 	text-decoration: underline;
 }
+
+footer {
+	color: #353A3B;
+	position: fixed;
+	bottom: 10px;
+	right: 20px;
+	font-size: 0.8em;
+}
+
+footer a {
+	color: #353A3B;
+}
