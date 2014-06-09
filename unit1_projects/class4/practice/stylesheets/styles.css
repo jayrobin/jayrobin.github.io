@@ -313,6 +313,15 @@ footer:after {
 
 /** Tablet view **/
 @media screen and (max-width: 960px){
+  /*Reduce h1 and navbar size*/
+  h1 {
+    font-size: 1.5em;
+  }
+
+  header {
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
 }
 
 /** Mobile view **/
