@@ -313,11 +313,12 @@ footer:after {
 
 /** Tablet view **/
 @media screen and (max-width: 960px){
-  /*Reduce h1 and navbar size*/
+  /*Reduce h1 size*/
   h1 {
     font-size: 1.5em;
   }
 
+  /*Reduce header size*/
   header {
     padding-bottom: 0px;
     padding-top: 0px;
@@ -326,4 +327,44 @@ footer:after {
 
 /** Mobile view **/
 @media screen and (max-width: 480px){
+  /*Reduce h1 size*/
+  header h1 {
+    font-size: 1em;
+    background-image: none;
+    padding-left: 0px;
+  }
+
+  /*Stack nav links*/
+  header nav li {
+    clear: both;
+    line-height: 30px;
+  }
+
+  /*Set article width to whole page*/
+  #famous article.woman {
+    width: 90%;
+    margin: 10px auto;
+    float: none;
+  }
+
+  /*Reduce h2 size*/
+  h2 {
+    font-size: 1.5em;
+  }
+
+  /*Move organizations list up*/
+  #organizations ul {
+    margin-top: 0;
+  }
+
+  /*Stretch organizations list items to full width*/
+  #organizations ul li {
+    max-width: 100%;
+  }
+
+  /*Hide organization images*/
+  #organizations img {
+    display: none;
+  }
+
 }
