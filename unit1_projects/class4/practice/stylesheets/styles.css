@@ -335,7 +335,7 @@ footer:after {
   }
 
   /*Stack nav links*/
-  header nav li {
+  header nav li, footer nav li {
     clear: both;
     line-height: 30px;
   }
@@ -367,9 +367,4 @@ footer:after {
     display: none;
   }
 
-}
-
-@viewport {
-  zoom: 1.0;
-  width: extend-to-zoom;
 }
