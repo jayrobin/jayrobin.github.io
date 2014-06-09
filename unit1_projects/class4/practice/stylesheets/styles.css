@@ -371,4 +371,5 @@ footer:after {
 
 @viewport {
   zoom: 1.0;
+  width: extend-to-zoom;
 }
