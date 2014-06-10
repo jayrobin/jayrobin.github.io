@@ -29,10 +29,9 @@ header h1 {
 	text-align: center;
 	margin: 0 auto;
 	font-weight: bold;
-	
 }
 
-/*nav*/
+/*header nav*/
 header nav ul li {
 	float: left;
 	display: inline-block;
@@ -58,6 +57,15 @@ header nav li a {
 }
 #contact {
 	margin-left: 2%;
+}
+
+/*header subtitle*/
+header h2 {
+	font-size: 1.5em;
+	width: 64%;
+	text-align: center;
+	margin: 0 auto;
+	opacity: 0.2;
 }
 
 /*main*/
