@@ -44,6 +44,7 @@ header nav ul li {
 
 header nav li a {
 	color: #000;
+	border-bottom: 1px solid black;
 }
 
 #home {
@@ -95,6 +96,10 @@ footer li {
 
 footer li a {
 	color: #fff;
+}
+
+footer nav li a:hover {
+	color: #aaa;
 }
 
 /*font*/
