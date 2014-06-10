@@ -1,0 +1,79 @@
+body * {
+	/*Outline elements for debugging*/
+	/*border: 1px dashed red;*/
+}
+
+body {
+	width: 90%;
+	margin: 0 auto;
+	font-family: 'Lato';
+}
+
+header, main {
+	width: 100%;
+	height: 50px;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*header*/
+header {
+	margin: 30px auto;
+}
+
+header h1 {
+	font-size: 4em;
+	width: 31%;
+	text-align: center;
+	margin: 0 auto;
+	font-weight: bold;
+	
+}
+
+/*nav*/
+header nav ul li {
+	float: left;
+	display: inline-block;
+	width: 14.5%;
+	text-align: center;
+	position: relative;
+	top: -42px;
+	font-size: 1.5em;
+}
+
+header nav li a {
+	color: #000;
+}
+
+#home {
+	margin-left: 1%;
+}
+#about {
+	margin-left: 2%;
+}
+#github {
+	margin-left: 35%;
+}
+#contact {
+	margin-left: 2%;
+}
+
+/*main*/
+
+
+/*footer*/
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+	left: 0;
+}
+
+/*font*/
+@font-face {
+	font-family: 'Lato';
+	src: url('http://themes.googleusercontent.com/static/fonts/lato/v7/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff');
+}
