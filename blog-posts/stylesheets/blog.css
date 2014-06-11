@@ -67,10 +67,6 @@ header nav li a:hover {
 	margin-left: 2%;
 }
 
-main {
-	font-family: 'Lato';
-}
-
 /*header subtitle*/
 header h2 {
 	font-size: 1.5em;
@@ -81,9 +77,16 @@ header h2 {
 }
 
 /*main*/
+main {
+	font-family: 'Lato';
+	max-width: 900px;
+	margin: 0 auto;
+}
+
 section {
 	margin-bottom: 30px;
 }
+
 section h3 {
 	width: 100%;
 	padding-bottom: 5px;
@@ -95,6 +98,7 @@ section h3 {
 section figure {
 	position: relative;
 	width: 31%;
+	max-width: 31%;
 	height: 250px;
 	background-color: #000;
 	display: inline-block;
@@ -105,17 +109,29 @@ section figure {
 section figure img {
 	height: 100%;
 	width: auto;
-	max-width: 100%;
-	max-height: 100%;
-	min-height: 100%;
+	/*min-height: 100%;*/
 	min-width: 100%;
+	opacity: 0.5;
 }
 
 section figure figcaption {
 	position: absolute;
-	top: 0;
+	top: 10px;
+	left: 10px;
 	width: 100%;
 	word-wrap: break-word;
+	transition: opacity 0.5s ease;  
+}
+section figure .blurb {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 90%;
+	word-wrap: break-word;
+	color: #fff;
+	line-height: 1.5em;
+	opacity: 0;
+	transition: opacity 0.5s ease;
 }
 
 section a:nth-child(2n) {
@@ -131,6 +147,14 @@ section a {
   transition: opacity 0.5s ease;  
 }
 section a:hover {
+	opacity: 1.0;
+}
+
+section a:hover figcaption {
+	opacity: 0;
+}
+
+section a:hover .blurb {
 	opacity: 1.0;
 }
 
@@ -210,6 +234,6 @@ footer nav li a:hover {
 /*responsive*/
 @media screen and (max-width: 900px){
 	header h1 {
-		font-size: 2em;
+		font-size: 3em;
 	}
 }
