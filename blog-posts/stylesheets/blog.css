@@ -67,6 +67,15 @@ header nav li a:hover {
 	margin-left: 2%;
 }
 
+section > p {
+	margin: 20px;
+}
+
+section > img {
+	float: left;
+	margin: 10px 20px;
+}
+
 /*header subtitle*/
 header h2 {
 	font-size: 1.5em;
