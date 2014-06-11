@@ -21,6 +21,7 @@ a {
 /*header*/
 header {
 	margin: 30px auto;
+	max-width: 900px;
 }
 
 header h1 {
@@ -67,15 +68,6 @@ header nav li a:hover {
 	margin-left: 2%;
 }
 
-section > p {
-	margin: 20px;
-}
-
-section > img {
-	float: left;
-	margin: 10px 20px;
-}
-
 /*header subtitle*/
 header h2 {
 	font-size: 1.5em;
@@ -119,7 +111,6 @@ section figure {
 section figure img {
 	height: 100%;
 	width: auto;
-	/*min-height: 100%;*/
 	min-width: 100%;
 	opacity: 0.6;
 }
@@ -175,6 +166,15 @@ section figcaption {
 
 section:last-child {
 	margin-bottom: 100px;
+}
+
+section > p {
+	margin: 20px;
+}
+
+section > img {
+	float: left;
+	margin: 10px 20px;
 }
 
 /*footer*/
@@ -244,5 +244,42 @@ footer nav li a:hover {
 @media screen and (max-width: 900px){
 	header h1 {
 		font-size: 3em;
+	}
+
+	section figcaption {
+		font-size: 2em;
+	}
+}
+
+@media screen and (max-width: 700px){
+	section a {
+		width: 280px;
+		max-width: 280px;
+		display: block;
+		margin: 0 auto;
+	}
+
+	section figure {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	section a:nth-child(n) {
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 480px){
+	header h1 {
+		font-size: 2em;
+	}
+
+	header h2 {
+		display: none;
+	}
+
+	header nav ul li {
+		font-size: 1em;
+		top: -30px;
 	}
 }
