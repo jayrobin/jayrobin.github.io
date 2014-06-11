@@ -101,6 +101,7 @@ section figure {
 	max-width: 31%;
 	height: 250px;
 	background-color: #000;
+	color: #ccc;
 	display: inline-block;
 	margin-top: 30px;
 	overflow: hidden;
@@ -111,7 +112,7 @@ section figure img {
 	width: auto;
 	/*min-height: 100%;*/
 	min-width: 100%;
-	opacity: 0.5;
+	opacity: 0.6;
 }
 
 section figure figcaption {
@@ -128,7 +129,6 @@ section figure .blurb {
 	left: 10px;
 	width: 90%;
 	word-wrap: break-word;
-	color: #fff;
 	line-height: 1.5em;
 	opacity: 0;
 	transition: opacity 0.5s ease;
@@ -159,7 +159,7 @@ section a:hover .blurb {
 }
 
 section figcaption {
-	color: #fff;
+	color: #bbb;
 	opacity: 0.8;
 	font-size: 4em;
 }
