@@ -271,7 +271,7 @@ footer nav li a:hover {
 
 @media screen and (max-width: 480px){
 	header h1 {
-		font-size: 2em;
+		font-size: 1.7em;
 	}
 
 	header h2 {
@@ -280,6 +280,6 @@ footer nav li a:hover {
 
 	header nav ul li {
 		font-size: 1em;
-		top: -30px;
+		top: -20px;
 	}
 }
