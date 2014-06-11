@@ -145,15 +145,18 @@ section a {
 	opacity: 0.8;
   transition: opacity 0.5s ease;  
 }
-section a:hover {
+section a:hover,
+section a:active {
 	opacity: 1.0;
 }
 
-section a:hover figcaption {
+section a:hover figcaption,
+section a:active figcaption {
 	opacity: 0;
 }
 
-section a:hover .blurb {
+section a:hover .blurb,
+section a:active .blurb  {
 	opacity: 1.0;
 }
 
