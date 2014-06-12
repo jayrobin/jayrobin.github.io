@@ -133,11 +133,11 @@ section figure .blurb {
 	transition: opacity 0.5s ease;
 }
 
-section a:nth-child(2n) {
+section > a:nth-child(2n) {
 	margin-left: 8.25%;
 }
 
-section a:nth-child(2n+1) {
+section > a:nth-child(2n+1) {
 	margin-left: 20.5%;
 }
 
@@ -177,6 +177,23 @@ section > p {
 section > img {
 	float: left;
 	margin: 10px 20px;
+}
+
+/*article*/
+article .article_content {
+	display: block;
+	width: 70%;
+	margin: 0 auto;
+}
+
+.article_content p {
+	font-size: 1.2em;
+	margin-bottom: 20px;
+	line-height: 1.8em;
+}
+
+.article_content a {
+	color: #7f8c8d;
 }
 
 /*footer*/
@@ -259,7 +276,7 @@ footer nav li a:hover {
 		max-width: 100%;
 	}
 
-	section a:nth-child(n) {
+	section > a:nth-child(n) {
 		width: 280px;
 		max-width: 280px;
 		display: block;
@@ -279,5 +296,11 @@ footer nav li a:hover {
 	header nav ul li {
 		font-size: 1em;
 		top: -20px;
+	}
+
+	.article_content p {
+		font-size: 1em;
+		margin-bottom: 15px;
+		line-height: 1.6em;
 	}
 }
