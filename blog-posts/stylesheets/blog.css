@@ -330,4 +330,8 @@ footer nav li a:hover {
 		margin-bottom: 15px;
 		line-height: 1.6em;
 	}
+
+	.unimportant {
+		display: none;
+	}
 }
