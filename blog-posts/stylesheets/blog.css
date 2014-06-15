@@ -204,6 +204,23 @@ article .article_content {
 
 .article_content img {
 	margin-bottom: 30px;
+	max-width: 100%;
+}
+
+.center {
+	display: block;
+	margin: 0 auto;
+}
+
+.article_content ul {
+	list-style-type: circle;
+	margin-left: 20px;
+}
+
+.article_content ul li {
+	font-size: 1.1em;
+	margin-bottom: 10px;
+	line-height: 1.7em;
 }
 
 .code {
