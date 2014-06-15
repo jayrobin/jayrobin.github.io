@@ -348,6 +348,16 @@ footer nav li a:hover {
 		line-height: 1.6em;
 	}
 
+	.article_content ul li {
+		font-size: 0.9em;
+		margin-bottom: 5px;
+		line-height: 1.5em;
+	}
+
+	article .article_content {
+		width: 90%;
+	}
+
 	.unimportant {
 		display: none;
 	}
