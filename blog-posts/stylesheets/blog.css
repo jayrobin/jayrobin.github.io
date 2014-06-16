@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+@import url(http://fonts.googleapis.com/css?family=Lato);
 
 body * {
 	/*Outline elements for debugging*/
@@ -8,7 +9,7 @@ body * {
 body {
 	width: 90%;
 	margin: 0 auto;
-	font-family: 'Open Sans Condensed', 'Lato';
+	font-family: 'Open Sans Condensed', 'Lato', sans-serif;
 	background-image: url('../../images/halftone.png');
 }
 
@@ -151,8 +152,8 @@ section > a:nth-child(2n+1) {
 	float: right;
 }
 
-section a {
-	width: 30%;
+section > a {
+	width: 31%;
 	display: inline-block;
 	opacity: 0.8;
   transition: opacity 0.5s ease;  
@@ -286,11 +287,6 @@ footer nav li a:hover {
 }
 
 /*font and icons*/
-@font-face {
-	font-family: 'Lato';
-	src: url('../../font/Lato.woff');
-}
-
 @font-face {
   font-family: 'IcoMoon';
   src: url('../../font/icomoon.woff') format('woff');
