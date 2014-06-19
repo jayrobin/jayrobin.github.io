@@ -38,7 +38,7 @@ header {
 #cohorts ul li {
 	list-style: none;
 	display: inline-block;
-	padding: 0px 20px 10px;
+	padding: 0px 20px;
 }
 
 header a {
@@ -52,7 +52,7 @@ header h1 {
 	margin: 20px;
 }
 
-#links {
+#links, #cohorts {
 	background-color: #FAFEFF;
 	display: inline-block;
 	width: 100%;
