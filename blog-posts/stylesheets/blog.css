@@ -139,6 +139,8 @@ section figure .blurb {
 	word-wrap: break-word;
 	line-height: 1.5em;
 	opacity: 0;
+	letter-spacing: 1px;
+	font-size: 1.2em;
 	transition: opacity 0.5s ease;
 }
 
