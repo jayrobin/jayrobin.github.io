@@ -118,10 +118,11 @@ section figure img {
 }
 
 section figure figcaption {
+	font-size: 3.6em;
 	position: absolute;
 	top: 10px;
 	left: 10px;
-	width: 100%;
+	width: 90%;
 	word-wrap: break-word;
 	transition: opacity 0.5s ease;  
 }
