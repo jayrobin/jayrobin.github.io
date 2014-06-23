@@ -312,8 +312,16 @@ footer nav li a:hover {
 		font-size: 3em;
 	}
 
+	header nav ul li {
+		top: -38px;
+	}
+
 	section figcaption {
 		font-size: 2em;
+	}
+
+	section > a {
+		width: 37%;
 	}
 }
 
