@@ -139,34 +139,34 @@ section figure .blurb {
 	transition: opacity 0.5s ease;
 }
 
-section > a:nth-child(2n) {
+.post:nth-child(2n) {
 	margin-left: 8.25%;
 	float: left;
 }
 
-section > a:nth-child(2n+1) {
+.post:nth-child(2n+1) {
 	margin-right: 8.25%;
 	float: right;
 }
 
-section > a {
+.post {
 	width: 31%;
 	display: inline-block;
 	opacity: 0.8;
   transition: opacity 0.5s ease;  
 }
-section a:hover,
-section a:active {
+.post:hover,
+.post:active {
 	opacity: 1.0;
 }
 
-section a:hover figcaption,
-section a:active figcaption {
+.post:hover figcaption,
+.post:active figcaption {
 	opacity: 0;
 }
 
-section a:hover .blurb,
-section a:active .blurb  {
+.post:hover .blurb,
+.post:active .blurb  {
 	opacity: 1.0;
 }
 
@@ -320,7 +320,7 @@ footer nav li a:hover {
 		font-size: 2em;
 	}
 
-	section > a {
+	.post {
 		width: 37%;
 	}
 }
@@ -331,7 +331,7 @@ footer nav li a:hover {
 		max-width: 100%;
 	}
 
-	section > a:nth-child(n) {
+	.post:nth-child(n) {
 		width: 280px;
 		max-width: 280px;
 		display: block;
