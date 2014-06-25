@@ -239,6 +239,17 @@ article .article_content {
 	margin: 10px auto;
 }
 
+.bad {
+	background-color: #e74c3c;
+}
+
+.ok {
+	background-color: #e67e22;
+}
+.good {
+	background-color: #27ae60;
+}
+
 .code > span {
 	display: block;
 	line-height: 1.4em;

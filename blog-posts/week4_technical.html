@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Jayrobin @ DBC</title>
+		<meta charset='utf-8'>
+		<link rel='stylesheet' href='../blog-posts/stylesheets/reset.css'>
+		<link rel='stylesheet' href='../blog-posts/stylesheets/blog.css'>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-2202293-16', 'jayrobin.github.io');
+      ga('send', 'pageview');
+
+    </script>
+	</head>
+	<body ontouchstart>
+		<header>
+			<h1>JAYROBIN</h1>
+			<nav>
+				<ul>
+					<li id='home'><a href='../index.html'>Home</a></li>
+					<li id='about'><a href='../about.html'>About</a></li>
+					<li id='github'><a href='http://www.github.com/jayrobin'>GitHub</a></li>
+					<li id='contact'><a href='mailto:james.michael.robinson@gmail.com'>Contact</a></li>
+				</ul>
+			</nav>
+			<h2>Or: how I learned to stop worrying and love programming</h2>
+		</header>
+		<main>
+			<section>
+				<article>
+					<h3>Week Four - Technical blog</h3>
+					<span class="article_content">
+						<p>25 Jun 2014</p>
+						<h4>Enumerating a collection</h4>
+						<p></p>
+
+						<span class='code bad'>
+							<span>for index in 0..list.length</span>
+							<span>&nbsp;&nbsp;puts list[index]</span>
+							<span>end</span>
+						</span>
+
+						<span class='code bad'>
+							<span>for item in list</span>
+							<span>&nbsp;&nbsp;puts item</span>
+							<span>end</span>
+						</span>
+
+						<span class='code bad'>
+							<span>index = 0</span>
+							<span>while index < list.length</span>
+							<span>&nbsp;&nbsp;puts list[index]</span>
+							<span>&nbsp;&nbsp;index++</span>
+							<span>end</span>
+						</span>
+
+						<span class='code good'>
+							<span>item.each do |item|</span>
+							<span>&nbsp;&nbsp;puts item</span>
+							<span>end</span>
+						</span>
+
+						<h4>Looping a predetermined number of times</h4>
+						<p>STUFF</p>
+						<span class='code bad'>
+							<span>for index in 0..10</span>
+							<span>&nbsp;&nbsp;puts index</span>
+							<span>end</span>
+						</span>
+
+						<span class='code bad'>
+							<span>index = 0</span>
+							<span>while index < 10</span>
+							<span>&nbsp;&nbsp;puts index</span>
+							<span>&nbsp;&nbsp;index++</span>
+							<span>end</span>
+						</span>
+
+						<span class='code good'>
+							<span>10.times do |index|</span>
+							<span>&nbsp;&nbsp;puts index</span>
+							<span>end</span>
+						</span>
+
+						<h4>Looping between two given indices</h4>
+						<span class='code bad'>
+							<span>for index in 10..20</span>
+							<span>&nbsp;&nbsp;puts index</span>
+							<span>end</span>
+						</span>
+
+						<span class='code bad'>
+							<span>index = 10</span>
+							<span>while index < 20</span>
+							<span>&nbsp;&nbsp;puts index</span>
+							<span>&nbsp;&nbsp;index++</span>
+							<span>end</span>
+						</span>
+
+						<span class='code good'>
+							<span>10.upto(20) do |index|</span>
+							<span>&nbsp;&nbsp;puts index</span>
+							<span>end</span>
+						</span>
+
+						<h4>Looping while a condition is true</h4>
+						<p>STUFF</p>
+						<span class='code ok'>
+							<span>while player.alive</span>
+							<span>&nbsp;&nbsp;player.move</span>
+							<span>end</span>
+						</span>
+
+						<span class='code good'>
+							<span>player.move while player.alive</span>
+						</span>
+
+						<h4>Looping until a condition is met</h4>
+						<span class='code bad'>
+							<span>while !game_over</span>
+							<span>&nbsp;&nbsp;take_turn</span>
+							<span>end</span>
+						</span>
+
+						<span class='code ok'>
+							<span>until game_over</span>
+							<span>&nbsp;&nbsp;take_turn</span>
+							<span>end</span>
+						</span>
+
+						<span class='code good'>
+							<span>take_turn until game_over</span>
+						</span>
+
+					</span>
+				</article>
+			</section>
+		</main>
+		<footer>
+			<nav>
+				<ul>
+					<li>
+						<a href='https://www.facebook.com/jamesmichaelrobinson'>
+							<span aria-hidden="true" data-icon="&#xe602;"></span>
+							<span class="screen-reader">Facebook</span>
+						</a>
+					</li>
+					<li>
+						<a href='https://plus.google.com/u/0/112484955141279120302/'>
+							<span aria-hidden="true" data-icon="&#xe601;"></span>
+							<span class="screen-reader">Google+</span>
+						</a>
+					</li>
+					<li>
+						<a href='https://twitter.com/jayrob_in'>
+							<span aria-hidden="true" data-icon="&#xe603;"></span>
+							<span class="screen-reader">Twitter</span>
+						</a>
+					</li>
+					<li>
+						<a href='http://www.github.com/jayrobin'>
+							<span aria-hidden="true" data-icon="&#xe604;"></span>
+							<span class="screen-reader">GitHub</span>
+						</a>
+					</li>
+					<li>
+						<a href='http://uk.linkedin.com/in/jayrobin'>
+							<span aria-hidden="true" data-icon="&#xe605;"></span>
+							<span class="screen-reader">LinkedIn</span>
+						</a>
+					</li>
+					<li>
+						<a href='mailto:james.michael.robinson@gmail.com'>
+							<span aria-hidden="true" data-icon="&#xe600;"></span>
+							<span class="screen-reader">Email</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</footer>
+	</body>
+</html>
