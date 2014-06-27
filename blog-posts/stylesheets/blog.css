@@ -95,6 +95,7 @@ section h3 {
 }
 
 section h4 {
+	margin-top: 40px;
 	padding-bottom: 10px;
 	font-size: 1.3em;
 	font-weight: bold;
@@ -197,7 +198,7 @@ article .article_content {
 }
 
 .article_content p {
-	font-size: 1.2em;
+	font-size: 1.1em;
 	margin-bottom: 20px;
 	line-height: 1.8em;
 }
