@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Jayrobin @ DBC</title>
+		<meta charset='utf-8'>
+		<link rel="shortcut icon" href="../images/favicon.ico">
+		<link rel='stylesheet' href='../blog-posts/stylesheets/reset.css'>
+		<link rel='stylesheet' href='../blog-posts/stylesheets/blog.css'>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-2202293-16', 'jayrobin.github.io');
+      ga('send', 'pageview');
+
+    </script>
+	</head>
+	<body ontouchstart>
+		<header>
+			<h1>JAYROBIN</h1>
+			<nav>
+				<ul>
+					<li id='home'><a href='../index.html'>Home</a></li>
+					<li id='about'><a href='../about.html'>About</a></li>
+					<li id='github'><a href='http://www.github.com/jayrobin'>GitHub</a></li>
+					<li id='contact'><a href='mailto:james.michael.robinson@gmail.com'>Contact</a></li>
+				</ul>
+			</nav>
+			<h2>Or: how I learned to stop worrying and love programming</h2>
+		</header>
+		<main>
+			<section>
+				<article>
+					<h3>Week Five - Technical blog</h3>
+					<span class="article_content">
+						<p>02 Jul 2014</p>
+						<h4>What is Object Oriented Programming?</h4>
+						<p>Object Oriented Programming, or OOP for short, is a programming paradigm which focuses on the creation of 'objects' which represent components a system (they could be representative of actual objects, or only make sense within the bounds of the system). Compare this to Procedural Programming, which is a programming paradigm centered around the logical sequence of step-by-step actions.</p>
+
+						<h4>What are classes?</h4>
+						<p>In OOP, classes are the blueprints for objects - they are defined by the programmer and created as 'instances' during runtime. Classes can contain attributes (also known as variables or properties) to store data about the object or class, and methods (also known as functions) to perform actions on the object or class.</p>
+
+						<p>The following is a class in ruby - it does not currently do anything or store any data about an individual instance:</p>
+
+						<span class='code'>
+							<span>class Vehicle</span>
+							<span>end</span>
+						</span>
+
+						<p>However, we can still create new vehicles:</p>
+						<span class='code'>
+							<span>vehicle_1 = Vehicle.new</span>
+							<span>vehicle_2 = Vehicle.new</span>
+							<span>vehicle_3 = Vehicle.new</span>
+						</span>
+
+						<h4>What are instance methods?</h4>
+						<p>Instance methods are methods which are atteched to every instance of a class:</p>
+						<span class='code'>
+							<span>class SomeClass</span>
+							<span>&nbsp;&nbsp;def print_greeting</span>
+							<span>&nbsp;&nbsp;&nbsp;&nbsp;puts "Hello, world."</span>
+							<span>&nbsp;&nbsp;end</span>
+							<span>end</span>
+						</span>
+						<p>To call the method above, we would create a new instance of SomeClass and call print_greeting on the instance:</p>
+						<span class='code'>
+							<span>some_object = SomeClass.new</span>
+							<span>some_object.print_greeting</span>
+							<span># Hello, world.</span>
+						</span>
+
+						<h4>What are instance variables?</h4>
+						<p>Instance variables are variables attached to individual instances of a class. In our example above, we have three vehicles, but they do not store any information. We can change this by adding instance variables to the class, which are represented in ruby with @variable_name. One way we could set the variable is by passing a value into the 'initialize' method, which is called when a new instance is created.</p>
+						<span class='code'>
+							<span>class Vehicle</span>
+							<span>&nbsp;&nbsp;def initialize(car_model)</span>
+							<span>&nbsp;&nbsp;&nbsp;&nbsp;@model = car_model</span>
+							<span>&nbsp;&nbsp;end</span>
+							<span>end</span>
+						</span>
+						<p>We can now set the model of each car, and retrieve it again later:</p>
+						<span class='code'>
+							<span>vehicle = Vehicle.new("Pontiac Aztek")</span>
+							<span>puts vehicle.model</span>
+							<span># undefined method 'model'</span>
+						</span>
+						<p>Why couldn't we get our model variable from the vehicle in the same way that we called the print_greeting method? The reason is that instance variables in ruby are private, so they are only accessible from within the object itself. We can get around this by creating an accessor method:</p>
+						<span class='code'>
+							<span>class Vehicle</span>
+							<span>&nbsp;&nbsp;def initialize(car_model)</span>
+							<span>&nbsp;&nbsp;&nbsp;&nbsp;@model = car_model</span>
+							<span>&nbsp;&nbsp;end</span>
+							<span></span>
+							<span>&nbsp;&nbsp;def model</span>
+							<span>&nbsp;&nbsp;&nbsp;&nbsp;@model</span>
+							<span>&nbsp;&nbsp;end</span>
+							<span>end</span>
+						</span>
+						<p>Now, when we try to set and retrieve the model for a car, it will work:</p>
+						<span class='code'>
+							<span>vehicle = Vehicle.new("Pontiac Aztek")</span>
+							<span>puts vehicle.model</span>
+							<span># Pontiac Aztek</span>
+						</span>
+						<p>But what if we want to change this variable again later?</p>
+						<span class='code'>
+							<span>vehicle = Vehicle.new("Pontiac Aztek")</span>
+							<span>vehicle.model = "Fiat Multipla"</span>
+							<span># undefined method 'model='</span>
+						</span>
+						<p>Unfortunately, we don't have a method in the Vehicle class to facilitate changing the model variable, but we can make one like so:</p>
+						<span class='code'>
+							<span>class Vehicle</span>
+							<span>&nbsp;&nbsp;def initialize(car_model)</span>
+							<span>&nbsp;&nbsp;&nbsp;&nbsp;@model = car_model</span>
+							<span>&nbsp;&nbsp;end</span>
+							<span></span>
+							<span>&nbsp;&nbsp;def model</span>
+							<span>&nbsp;&nbsp;&nbsp;&nbsp;@model</span>
+							<span>&nbsp;&nbsp;end</span>
+							<span></span>
+							<span>&nbsp;&nbsp;def model=(car_model)</span>
+							<span>&nbsp;&nbsp;&nbsp;&nbsp;@model = car_model</span>
+							<span>&nbsp;&nbsp;end</span>
+							<span>end</span>
+						</span>
+						<p>And now when we try to change the model variable:</p>
+						<span class='code'>
+							<span>vehicle = Vehicle.new("Pontiac Aztek")</span>
+							<span>vehicle.model = "Fiat Multipla"</span>
+							<span>puts vehicle.model</span>
+							<span># Fiat Multipla</span>
+						</span>
+
+						<h4>What else can we do with objects?</h4>
+						<p>To build upon our vehicles example, we could create a Garage class to store vehicles, like a database. For this, we'd need the Garage class to have a way to store the individual vehicles - an array seems like a good choice:</p>
+						<span class='code'>
+							<span>class Garage</span>
+							<span>&nbsp;&nbsp;def initialize</span>
+							<span>&nbsp;&nbsp;&nbsp;&nbsp;@vehicles = []</span>
+							<span>&nbsp;&nbsp;end</span>
+							<span>end</span>
+						</span>
+						<p>At this point, we could create a Garage object and it would have an empty list of vehicles, but we have no way to add vehicles to the list, and no way to get them afterwards. We could create an accessor method for the vehicles array:</p>
+						<span class='code bad'>
+							<span>class Garage</span>
+							<span>&nbsp;&nbsp;def initialize</span>
+							<span>&nbsp;&nbsp;&nbsp;&nbsp;@vehicles = []</span>
+							<span>&nbsp;&nbsp;end</span>
+							<span></span>
+							<span>&nbsp;&nbsp;def vehicles</span>
+							<span>&nbsp;&nbsp;&nbsp;&nbsp;@vehicles</span>
+							<span>&nbsp;&nbsp;end</span>
+							<span>end</span>
+						</span>
+						<p>This would allow us to push vehicles onto the vehicles array:</p>
+						<span class='code bad'>
+							<span>vehicle = Vehicle.new("Kia Optima")</span>
+							<span>garage = Garage.new</span>
+							<span>garage.vehicles.push(vehicle)</span>
+						</span>
+						<p>However, opening up the internals of a class like this is not very good practice - after creating a garage we could easily (accidently or maliciously) alter the vehicles array in destructive ways. Instead, we'd be better creating an instance method to add a vehicle with the implementation of the method hidden within the class:</p>
+						<span class='code good'>
+							<span>class Garage</span>
+							<span>&nbsp;&nbsp;def initialize</span>
+							<span>&nbsp;&nbsp;&nbsp;&nbsp;@vehicles = []</span>
+							<span>&nbsp;&nbsp;end</span>
+							<span></span>
+							<span>&nbsp;&nbsp;def add(vehicle)</span>
+							<span>&nbsp;&nbsp;&nbsp;&nbsp;@vehicles.push(vehicle)</span>
+							<span>&nbsp;&nbsp;end</span>
+							<span>end</span>
+						</span>
+						<span class='code good'>
+							<span>vehicle = Vehicle.new("Kia Optima")</span>
+							<span>garage = Garage.new</span>
+							<span>garage.add(vehicle)</span>
+						</span>
+						<p>We could extend our garage further by adding some useful instance methods:</p>
+						<span class='code'>
+							<span>class Garage</span>
+							<span>&nbsp;&nbsp;def initialize</span>
+							<span>&nbsp;&nbsp;&nbsp;&nbsp;@vehicles = []</span>
+							<span>&nbsp;&nbsp;end</span>
+							<span></span>
+							<span>&nbsp;&nbsp;def add(vehicle)</span>
+							<span>&nbsp;&nbsp;&nbsp;&nbsp;@vehicles.push(vehicle)</span>
+							<span>&nbsp;&nbsp;end</span>
+							<span></span>
+							<span>&nbsp;&nbsp;def get_number_of_vehicles</span>
+							<span>&nbsp;&nbsp;&nbsp;&nbsp;@vehicles.size</span>
+							<span>&nbsp;&nbsp;end</span>
+							<span></span>
+							<span>&nbsp;&nbsp;def print_vehicles</span>
+							<span>&nbsp;&nbsp;&nbsp;&nbsp;@vehicles.each { |v| puts v }</span>
+							<span>&nbsp;&nbsp;end</span>
+							<span>end</span>
+						</span>
+						<p>The get_number_of_vehicles method returns the number of vehicles in the garage, and the print_vehicles method will print out every vehicle in the garage.</p>
+
+						<p>While this article only covers the absolute basics of Object Oriented Programming, armed with just classes, instance variables and intance methods you can create some very complex systems in ruby.</p>
+
+				</article>
+			</section>
+		</main>
+		<footer>
+			<nav>
+				<ul>
+					<li>
+						<a href='https://www.facebook.com/jamesmichaelrobinson'>
+							<span aria-hidden="true" data-icon="&#xe602;"></span>
+							<span class="screen-reader">Facebook</span>
+						</a>
+					</li>
+					<li>
+						<a href='https://plus.google.com/u/0/112484955141279120302/'>
+							<span aria-hidden="true" data-icon="&#xe601;"></span>
+							<span class="screen-reader">Google+</span>
+						</a>
+					</li>
+					<li>
+						<a href='https://twitter.com/jayrob_in'>
+							<span aria-hidden="true" data-icon="&#xe603;"></span>
+							<span class="screen-reader">Twitter</span>
+						</a>
+					</li>
+					<li>
+						<a href='http://www.github.com/jayrobin'>
+							<span aria-hidden="true" data-icon="&#xe604;"></span>
+							<span class="screen-reader">GitHub</span>
+						</a>
+					</li>
+					<li>
+						<a href='http://uk.linkedin.com/in/jayrobin'>
+							<span aria-hidden="true" data-icon="&#xe605;"></span>
+							<span class="screen-reader">LinkedIn</span>
+						</a>
+					</li>
+					<li>
+						<a href='mailto:james.michael.robinson@gmail.com'>
+							<span aria-hidden="true" data-icon="&#xe600;"></span>
+							<span class="screen-reader">Email</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</footer>
+	</body>
+</html>
