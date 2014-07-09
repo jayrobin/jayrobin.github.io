@@ -257,6 +257,11 @@ article .article_content {
 	word-wrap: break-word;
 }
 
+sup {
+	vertical-align: super;
+	font-size: 0.8em;
+}
+
 /*footer*/
 footer {
 	background-color: black;
