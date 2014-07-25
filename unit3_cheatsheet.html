@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Regex Cheatsheet</title>
+		<meta charset='utf-8' />
+		<link rel='stylesheet' href='./blog-posts/stylesheets/reset.css' />
+		<link rel='stylesheet' href='unit3_cheatsheet.css' />
+	</head>
+	<body>
+		<header>
+      <h1>Regular Expressions</h1>
+      <h2>A ruby cheatsheet</h2>
+    </header>
+
+    <main>
+			<table>
+				<thead>
+					<tr>
+						<th>Symbol</th><th>Description</th><th width='15%'>Example</th><th>Matches</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>a</td>
+						<td class='left'>Match any single character, such as a letter, number or punctuation, by typing it with no modifiers</td>
+						<td><a href='http://rubular.com/r/yALAPBOKCw' target='_blank'>@</a></td>
+						<td>@</td>
+					</tr>
+
+					<tr>
+						<td>abc</td>
+						<td class='left'>Match a sequence of characters by typing them with no modifiers</td>
+						<td><a href='http://rubular.com/r/fxbvYTiyH8' target='_blank'>hello</a></td>
+						<td>hello</td>
+					</tr>
+
+					<tr>
+						<td>(a|b)</td>
+						<td class='left'>Match one sequence OR another by separating them with a pipe character and enclosing them in paretheses</td>
+						<td><a href='http://rubular.com/r/rEQmZDwg1u' target='_blank'>(0|zero)</a></td>
+						<td>0, zero</td>
+					</tr>
+
+					<tr>
+						<td>[abc]</td>
+						<td class='left'>Match a single character to one of any given characters by enclosing the group in square brackets</td>
+						<td><a href='http://rubular.com/r/xuwkuzQBOJ' target='_blank'>h[aeiou]ll</a></td>
+						<td>hall, hell, hill, holl, hull</td>
+					</tr>
+
+					<tr>
+						<td>[a-z]</td>
+						<td class='left'>Match a single character from a range of characters by separating the start and end character in the sequence with a dash and enclosing in square brackets</td>
+						<td><a href='http://rubular.com/r/mDGs9kI70g' target='_blank'>[0-9A-Z]</a></td>
+						<td>0, 1, 2, 3, ...A, B, C, D, E, ...</td>
+					</tr>
+
+					<tr>
+						<td>a?</td>
+						<td class='left'>Match zero or one of the preceeding symbol</td>
+						<td><a href='http://rubular.com/r/7bCuQPepR9' target='_blank'>dogs?</a></td>
+						<td>dog, dogs</td>
+					</tr>
+
+					<tr>
+						<td>[abc]?</td>
+						<td class='left'> class='left'Match zero or one of any of the preceeding group</td>
+						<td><a href='http://rubular.com/r/yALAPBOKCw' target='_blank'>y[aeiou]?s</a></td>
+						<td>ys, yas, yes, yis, yos, yus</td>
+					</tr>
+
+					<tr>
+						<td>[abc]?</td>
+						<td class='left'>Match zero or one of the preceeding sequence</td>
+						<td><a href='http://rubular.com/r/bz8J5RStlB' target='_blank'>my name (is )?bob</a></td>
+						<td>my name is bob, my name bob</td>
+					</tr>
+
+					<tr>
+						<td>a+</td>
+						<td class='left'>Match one or more of a given symbol in sequence</td>
+						<td><a href='http://rubular.com/r/xwphzapgjd' target='_blank'>5+</a></td>
+						<td>5, 55, 555, 5555, ...</td>
+					</tr>
+
+					<tr>
+						<td>a*</td>
+						<td class='left'>Match zero or more of a given symbol in sequence</td>
+						<td><a href='http://rubular.com/r/1Bc42nA45n' target='_blank'>hel*o</a></td>
+						<td>heo, helo, hello, helllo, ...</td>
+					</tr>
+
+					<tr>
+						<td>a{n}</td>
+						<td class='left'>Match exactly n of the preceeding symbol in sequence</td>
+						<td><a href='http://rubular.com/r/zSdrRlGUwi' target='_blank'>hel{2}o</a></td>
+						<td>hello</td>
+					</tr>
+
+					<tr>
+						<td>a{n,m}</td>
+						<td class='left'>Match between n and m of the preceeding symbol in sequence</td>
+						<td><a href='http://rubular.com/r/0r4QFneLXU' target='_blank'>what{2,4}</a></td>
+						<td>whatt, whattt, whatttt</td>
+					</tr>
+
+					<tr>
+						<td>a{n,}</td>
+						<td class='left'>Match at least n of the preceeding symbol in sequence</td>
+						<td><a href='http://rubular.com/r/WBu75zhswP' target='_blank'>hi{3,}</a></td>
+						<td>hiii, hiiii, hiiiii, hiiiiii, ...</td>
+					</tr>
+
+					<tr>
+						<td>[^a-z] or [^abc]</td>
+						<td class='left'>The carat negates the pattern inside the square brackets, which will therefore match anything except the given pattern for a single character</td>
+						<td><a href='http://rubular.com/r/6ZsLbZDAcS' target='_blank'>h[^aeiou]llo</a></td>
+						<td>hbllo, hcllo, h8llo, h!llo, ... (any character except a digit)</td>
+					</tr>
+
+					<tr>
+						<td>^abc</td>
+						<td class='left'>The carat when used outside of square brackets indicates the start of the line, meaning that the regex will only match if the line starts with the pattern.</td>
+						<td><a href='http://rubular.com/r/KxtmhftEPr' target='_blank'>^123</a></td>
+						<td>123 (but not "hello 123")</td>
+					</tr>
+
+					<tr>
+						<td>abc$</td>
+						<td class='left'> class='left'Indicates the end of the line, meaning that the regex will only match if the line ends with the pattern.</td>
+						<td><a href='http://rubular.com/r/SRmoFrsXbz' target='_blank'>123$</a></td>
+						<td>123 (but not "123 hello")</td>
+					</tr>
+
+					<tr>
+						<td>\s</td>
+						<td class='left'>Match any whitespace character, such as space, tab or newline (\S matches anything except a whitespace character)</td>
+						<td><a href='http://rubular.com/r/DI7IssB1mj' target='_blank'>hi\s*there</a></td>
+						<td>hithere, hi there, hi   there, ...</td>
+					</tr>
+
+					<tr>
+						<td>\d</td>
+						<td class='left'>Match any digit (\D matches anything except a digit)</td>
+						<td><a href='http://rubular.com/r/Pz11xlYInz' target='_blank'>I have \d cats</a></td>
+						<td>I have 0 cats, I 1 cats, I have 3 cats, ...</td>
+					</tr>
+
+					<tr>
+						<td>\w</td>
+						<td class='left'>Match any word character, such as a lower/upper case letter, number or underscore (\W matches anything except a word character)</td>
+						<td><a href='http://rubular.com/r/R1FjKQzoZm' target='_blank'>h\wllo</td>
+						<td>hello, hAllo, h8llo, h_llo, ...</td>
+					</tr>
+				</tbody>
+			</table>
+		</main>
+		<footer>
+			<nav>
+				<ul>
+					<li>
+						<a href='http://www.tutorialspoint.com/ruby/ruby_regular_expressions.htm'>Regex Tutorialspoint</a>
+					</li>
+					<li>
+						<a href='http://rubular.com/'>Rubuluar</a>
+					</li>
+					<li>
+						<a href='http://www.ruby-doc.org/core-2.1.1/Regexp.html'>Regexp Ruby docs</a>
+					</li>
+				</ul>
+			</nav>
+		</footer>
+	</body>
+</html>
