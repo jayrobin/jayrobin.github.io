@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Jayrobin</title>
+		<meta charset="utf-8">
+		<link rel="shortcut icon" href="/img/favicon.ico">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="/css/normalize.css">
+		<link rel="stylesheet" href="/css/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-2202293-16', 'jayrobin.github.io');
+      ga('send', 'pageview');
+    </script>
+	</head>
+	<body>
+		<header>
+			<h1><a href="/">JAYROBIN</a></h1>
+			<span>Software Engineer. Mostly Front-end. I like to build stuff</span>
+		</header>
+		<main>
+      <h2>LED Picture Frame</h2>
+			<p>I recently completed <a href="https://monthly.com/mark-rober-engineering/" target="_blank" rel="noopener noreferrer nofollow">Mark Rober's Creative Engineering course</a>, which has you building three projects of your own design. For the second project, we were tasked with building something electrical in the theme of 'art'. I've wanted to play with an LED matrix for a while, so I thought I'd build an LED picture frame. The idea being that you could upload some low resolution picture and get a pretty good pixelated rendition of it in a 32x64 LED matrix.</p>
+			<p>I used this <a href="https://www.amazon.com/gp/product/B07S2VZ13G/ref=ppx_yo_dt_b_asin_title_o06_s02?ie=UTF8&psc=1" target="_blank" rel="noopener noreferrer nofollow">flexible LED matrix</a> powered by an <a href="https://www.amazon.com/gp/product/B01H4ZDYCE/ref=ppx_od_dt_b_asin_title_s00?ie=UTF8&psc=1" target="_blank" rel="noopener noreferrer nofollow">Arduino Mega</a>, set in a cheap <a href="https://www.amazon.com/gp/product/B07S5ZDVSG/ref=ppx_od_dt_b_asin_title_s01?ie=UTF8&psc=1" target="_blank" rel="noopener noreferrer nofollow">8"x14" picture frame</a>. I also used a <a href="https://www.amazon.com/gp/product/B078RT3ZPS/ref=ppx_od_dt_b_asin_title_s01?ie=UTF8&psc=1" target="_blank" rel="noopener noreferrer nofollow">5V 5A power supply</a> for the matrix, and then powered the Arduino separately with a 9V battery (mainly because I ran out of time to set it all up off a single supply).</p>
+			<p>To convert the picture to be readable by the RGBmatrixPanel library, I wrote a small node script to read each pixel and convert the whole thing into a uint16_t array. I subsequently upload the whole thing to the chip and read from PROGMEM, which gives me the option to potentially add a whole bunch of different pictures and cycle through them if I want.</p>
+			<p>I was pretty happy with the result, but felt it needed something extra. I bought these <a href="https://www.amazon.com/gp/product/B077Z8QN3S/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1" target="_blank" rel="noopener noreferrer nofollow">dual axis joysticks</a> and decided to add a little Easter Egg: if you click the joystick it will switch from 'Picture' to 'Game' mode, and you can play a fully-functioning game of Snake.</p>
+
+			<blockquote class="imgur-embed-pub" lang="en" data-id="a/Ix3asr1"  ><a href="//imgur.com/a/Ix3asr1">LED Picture Frame + Snake</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+
+			<h3>Resources</h3>
+			<ul>
+				<li><a href="https://learn.sparkfun.com/tutorials/rgb-panel-hookup-guide" target="_blank" rel="noopener noreferrer nofollow">SparkFun: RGB Panel Hookup Guide</a></li>
+				<li><a href="https://www.instructables.com/64x32-RGB-LED-Matrix-With-Arduino-Mega/" target="_blank" rel="noopener noreferrer nofollow">Instructables: 64x32 RGB LED Matrix With Arduino Mega</a></li>
+			</ul>
+		</main>
+		<footer>
+			<div class="contact">
+				<a href="/resume_james_robinson.pdf" target="_blank" rel="noopener noreferrer nofollow">Resume</a> -
+				<a href="https://www.linkedin.com/in/jayrobin/" target="_blank" rel="noopener noreferrer nofollow">LinkedIn</a> -
+				<a href="https://github.com/jayrobin" target="_blank" rel="noopener noreferrer nofollow">GitHub</a> -
+				<a href="mailto:james.michael.robinson@gmail.com">email</a>
+			</div>
+		</footer>
+	</body>
+</html>
